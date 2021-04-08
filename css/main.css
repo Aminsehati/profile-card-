@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+a{
+    text-decoration: none;
+}
+.small-14{
+    font-size: 14px;
+}
+.small-15{
+    font-size: 15px;
+}
+.small-16{
+    font-size: 16px;
+}
+.text-black{
+    color: black;
+}
+.h3{
+    font-weight: 300;
+}
+.text-gray{
+    color: #8e8f93;
+}
+.text-center{
+    text-align: center;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.content{
+   background: #19a1ad;
+   min-height: 100vh;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.content::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+    height: 63%;
+    background: url(../img/bg-pattern-bottom.svg);
+    opacity: 0.6;
+}
+.content::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 64%;
+    background: url(../img/bg-pattern-top.svg);
+    transform: rotate(180deg);
+    opacity: 0.187;
+}
+.main-content{
+    width: 350px;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 30;
+}
+.header-content{
+    width: 100%;
+    height:150px;
+    background: url(../img/bg-pattern-card.svg);
+    position: relative;
+    border-radius: 4px;
+}
+.avatar-img{
+    position:absolute;
+    bottom: -35px;
+    left: 50%;
+    transform:translateX(-50%) ;
+}
+.avatar-img img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #fff;
+    z-index: 20;
+}
+.username-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 8px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.border-bottom{
+    border-bottom: 1px solid #e7e7e7;
+}
+.follower{
+    display: flex;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+.followItem{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: center;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+@media screen and (max-width:625px){
+    .main-content{
+        width: 100% !important;
+    }
+    .content{
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width:377px){
+    .follower .followItem{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .follower .followItem:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
